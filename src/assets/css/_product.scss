@@ -1,0 +1,217 @@
+.product {
+    background: $c-bg-block;
+    border-radius: $radius-block;
+    border-top-left-radius: 0;
+    overflow: hidden;
+    width: 100%;
+
+    @include m-m {
+        border-top-left-radius: $radius-block;
+    }
+
+    &--hidden {
+        @include m-d {
+            display: none;
+        }
+
+        .product__content {
+            @include m-m {
+                display: none;
+            }
+        }
+    }
+
+    & + & {
+        @include m-m {
+            margin-top: 20px;
+        }
+    }
+
+    &__content {
+        padding: 40px 60px;
+
+        @include m-m {
+            padding: 20px 30px;
+        }
+    }
+
+    &__header {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 500;
+        color: $c-txt-main;
+        padding: 22px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--active {
+            color: $c-primary;
+
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: url(../img/angle.svg) no-repeat center;
+            background-size: 24px;
+            transition: all .3s ease;
+        }
+    }
+
+    &__main {
+        padding-bottom: 30px;
+        border-bottom: 1px solid $c-border-main;
+
+        @include m-d {
+            padding-bottom: 40px;
+            display: flex;
+        }
+    }
+
+    &__photo {
+        @include m-d {
+            position: relative;
+            width: 230px;
+            flex-shrink: 0;
+        }
+
+        img {
+            @include m-d {
+                position: absolute;
+                right: 0;
+                max-width: none;
+            }
+
+            @include m-m {
+                width: auto;
+                display: block;
+                margin: 0 auto 20px;
+            }
+        }
+    }
+
+    &__desc {
+        @include m-d {
+            margin-left: 71px;
+        }
+
+        p {
+            color: $c-txt-muted;
+        }
+
+        p + p {
+            margin-top: 16px;
+
+            @include m-m {
+                margin-top: 15px;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        margin-bottom: 20px;
+
+        @include m-m {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__section {
+        margin-top: 40px;
+
+        @include m-m {
+            margin-top: 30px;
+        }
+    }
+
+    &__features {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -16px;
+        list-style-position: inside;
+
+        li {
+            width: 301px;
+            margin-bottom: 16px;
+
+            @include m-m {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+
+        @at-root ol#{&} {
+            list-style-type: decimal;
+        }
+
+        @at-root ul#{&} {
+            li::before {
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                width: 20px;
+                height: 20px;
+                margin-right: 16px;
+                background: url(../img/bullet.svg);
+            }
+        }
+    }
+
+    &__form {
+        @include m-d {
+            display: flex;
+            align-items: center;
+        }
+
+        &-item {
+            @include m-m {
+                width: 100%;
+            }
+        }
+
+        &-item + &-item {
+            @include m-d {
+                margin-left: 16px;
+            }
+            
+            @include m-m {
+                margin-top: 15px;
+            }           
+        }
+    }
+
+    &__controls {
+        display: flex;
+        padding: 30px 36px;
+        border-radius: $radius-block;
+        box-shadow: 0px 10px 40px rgba(12, 12, 12, 0.1);
+
+        @include m-m {
+            padding: 30px 20px;
+        }
+
+        &-item {
+            @include m-m {
+                width: 100%;
+            }
+        }
+
+        &-item + &-item {
+            margin-left: 10px;
+
+            @media m-m {
+                margin-left: 15px;
+            }
+        }
+    }
+}

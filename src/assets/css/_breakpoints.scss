@@ -1,0 +1,13 @@
+$screen-m: 886px;
+
+@mixin m-m {
+    @media (max-width: #{$screen-m}) {
+        @content;
+    }
+}
+
+@mixin m-d {
+    @media (min-width: #{$screen-m}) {
+        @content;
+    }
+}

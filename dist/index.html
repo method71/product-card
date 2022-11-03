@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Велосипеды</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="tabs hidden-m" id="productTabs">
+            <a href="#" class="tabs__item tabs__item--current" data-product-id="1">Горный велосипед</a>
+            <a href="#" class="tabs__item" data-product-id="2">Женский велосипед</a>
+        </nav>
+
+        <article class="product" data-id="1">
+            <div class="product__header product__header--active hidden-d">Горный велосипед</div>
+            
+            <div class="product__content">
+                <div class="product__main">
+                    <div class="product__photo">
+                        <img src="./img/bike1.png" width="358" alt="">
+                    </div>
+                    <div class="product__desc">
+                        <h1 class="product__title">Велосипед STELS Navigator 510 HD 26 2022</h1>
+                        <p>Данный велосипед с колесами 26 дюймов хорошо подходит высоким подросткам. Прогиб рамы и небольшой размер рамы расчитан на рост от 135 до 165 см.</p>
+                        <p>Суммарный вес велосипеда был снижен до 16,9 кг, так как рама была изготовлена с учетом использования велосипеда подростками.</p>
+                    </div>
+                </div>
+    
+                <div class="product__section">
+                    <h3 class="product__subtitle">Характеристики</h3>
+                    <ol class="product__features" data-id="1">
+                        <li>Двойной обод</li>
+                        <li>Колеса диаметром 26 дюймов</li>
+                        <li>Алюминиевый сплав</li>
+                        <li>Покрышки 26х1,95"</li>
+                    </ol>
+                </div>
+    
+                <div class="product__section">
+                    <h3 class="product__subtitle">Добавить характеристику</h3>
+                    <form action="#" class="product__form" data-list="1">
+                        <input type="text" required="" class="product__form-item input" placeholder="Алюминиевый сплав">
+                        <button class="product__form-item button button--primary" type="submit">Добавить</button>
+                    </form>
+                </div>
+    
+                <div class="product__section product__controls">
+                    <button class="product__controls-item button button--primary">Окей</button>
+                    <button class="product__controls-item button button--secondary">Отмена</button>
+                </div>
+            </div>
+        </article>
+
+        <article class="product product--hidden" data-id="2">
+            <div class="product__header hidden-d">Женский велосипед</div>
+
+            <div class="product__content">
+                <div class="product__main">
+                    <div class="product__photo">
+                        <img src="./img/bike2.png" width="358" alt="">
+                    </div>
+                    <div class="product__desc">
+                        <h1 class="product__title">Велосипед SCHWINN Traveler women 2022</h1>
+                        <p>Женский велосипед со стальной рамой Classic step-true lightweight позволяет девушкам без проблем его перемещать.</p>
+                        <p>На данном велосипеде имеется 7 скоростей с переключателями от Shimano, а жесткая вилка обеспечивает отличную управляемость. Подходит для катания по асфальтированным поверхностям.</p>
+                    </div>
+                </div>
+    
+                <div class="product__section">
+                    <h3 class="product__subtitle">Характеристики</h3>
+                    <ul class="product__features" data-id="2">
+                        <li>Стальная рама</li>
+                        <li>Колеса диаметром 24 дюймов</li>
+                        <li>Жесткая вилка</li>
+                        <li>7 скоростей</li>
+                    </ul>
+                </div>
+    
+                <div class="product__section">
+                    <h3 class="product__subtitle">Добавить характеристику</h3>
+                    <form class="product__form" data-list="2">
+                        <input type="text" required="" class="product__form-item input" placeholder="Алюминиевый сплав">
+                        <button class="product__form-item button button--primary" type="submit">Добавить</button>
+                    </form>
+                </div>
+    
+                <div class="product__section product__controls">
+                    <button class="product__controls-item button button--primary">Окей</button>
+                    <button class="product__controls-item button button--secondary">Отмена</button>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+@import '_reset';
+@import '_var';
+@import '_fonts';
+@import '_breakpoints';
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: $c-bg-page;
+    color: $c-txt-muted;
+    font-size: 16px;
+    line-height: 24px;
+    min-height: 100%;
+
+    @include m-m {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 886px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+    color: $c-txt-main;
+
+    @media m-m {
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 33px;
+    color: $c-txt-main;
+
+    @media m-m {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+
+    @media m-m {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+
+    &__item {
+        padding: 20px 24px;
+        color: $c-txt-main;
+        font-size: 22px;
+        line-height: 33px;
+        font-weight: 500;
+        text-decoration: none;
+        border-radius: $radius-block $radius-block 0 0;
+        background: $c-bg-muted;
+
+        &--current {
+            background: $c-bg-block;
+            color: $c-primary
+        }
+    }
+}
+
+.input {
+    border: 1px solid $c-border-main;
+    border-radius: $radius-element;
+    padding: 14px 16px;
+    line-height: 24px;
+    width: 351px;
+    max-width: 100%;
+
+    &:focus {
+        border-color: $c-primary;
+    }
+
+    &::placeholder {
+        color: $c-txt-placeholder;
+    }
+}
+
+.button {
+    padding: 14px 24px;
+    border-radius: $radius-element;
+    line-height: 24px;
+
+    &--primary {
+        background: $c-primary;
+        color: $c-on-primary;
+
+        &:hover {
+            background: $c-primary-hover;
+        }
+    
+        &:active {
+            background: $c-primary-active;
+        }
+    }
+
+    &--secondary {
+        background: none;
+        color: $c-txt-main;
+
+        &:hover {
+            color: $c-primary-hover;
+        }
+    
+        &:active {
+            color: $c-primary-active;
+        }
+    }
+}
+
+@import '_product';
+
+.hidden {
+    display: none;
+
+    &-m {
+        @include m-m {
+            display: none;
+        }
+    }
+
+    &-d {
+        @include m-d {
+            display: none;
+        }
+    }
+}
